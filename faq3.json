@@ -1,0 +1,672 @@
+{
+  "name": "chatbot-rasa",
+  "version": "1.0.0",
+  "description": "Smart Academy chatbot intents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "intents": [
+    {
+      "title": "Greeting",
+      "tags": ["greeting"],
+      "questions": ["Hello", "Hi", "Hey", "How are you?", "Good morning", "Good evening"],
+      "answer": "Hello, how may I be of help today?"
+    },
+    {
+      "title": "About Smart Academy",
+      "tags": ["general", "about", "what", "smart academy", "info"],
+      "questions": [
+        "What is Smart Academy?",
+        "Tell me about Smart Academy.",
+        "Can you explain what Smart Academy is?",
+        "Who runs Smart Academy?",
+        "Is Smart Academy a government initiative?"
+      ],
+      "answer": "Smart Academy is an online learning platform developed by the ICT Authority to enable Kenyan citizens to access digital training."
+    },
+    {
+      "title": "Target Audience",
+      "tags": ["general", "audience"],
+      "questions": [
+        "Who should consider Smart Academy?",
+        "Who can benefit from Smart Academy?",
+        "Is Smart Academy for everyone?",
+        "Can I study from Smart Academy?",
+        "Is it open to the public?",
+        "Can youth access Smart Academy?"
+      ],
+      "answer": "Anyone looking to improve their digital skills, including professionals, students, and public servants, can benefit from Smart Academy."
+    },
+    {
+      "title": "Mobile Access",
+      "tags": ["platform", "mobile", "access"],
+      "questions": [
+        "Can I access Smart Academy on my phone?",
+        "Does Smart Academy work on smartphones?",
+        "Is the platform mobile-friendly?",
+        "Can I use a tablet or iPad for Smart Academy?",
+        "Can I learn on my laptop?"
+      ],
+      "answer": "Yes, the platform is responsive and can be accessed on smartphones, tablets, and laptops."
+    },
+    {
+      "title": "Course Levels Overview",
+      "tags": ["courses", "course", "levels"],
+      "questions": [
+        "What are the course levels available?",
+        "Tell me about the different training levels.",
+        "What learning levels are provided at Smart Academy?"
+      ],
+      "answer": "There are four course levels: 1) Foundational Digital Skills, 2) Basic Digital Skills, 3) Intermediate Digital Skills, and 4) Advanced Digital Skills."
+    },
+    {
+      "title": "Foundational Digital Skills",
+      "tags": ["beginner", "no experience", "entry-level, foundational", "Foundational Digital Skills"],
+      "questions": [
+        "Tell me about foundational digital skills",
+        "What is a foundational course?",
+        "I have no experience in IT, where do I start?",
+        "Can I take a course without any experience?",
+        "Do you offer any foundational level courses?",
+        "What foundational courses do you offer?",
+        "Can you tell me your entry-level programs?",
+        "Which courses are suitable for someone new to Information Technology?",
+        "What can I start with if I have zero IT background?"
+      ],
+      "answer": "The Foundational Digital Skills Curriculum is designed to empower individuals with basic knowledge to thrive in a digital world. Start your tech journey at https://www.smartacademy.go.ke."
+    },
+    {
+      "title": "Foundational Course Units",
+      "tags": ["fee", "foundational_units", "entry-level", "foundational", "Foundational Course Units"],
+      "questions": [
+        "What units are in the foundational course?",
+        "Can you list the foundational topics?",
+        "What do I learn in the foundational course?"
+      ],
+       "answer": "We offer foundational course with units such as F101: Operating Digital Devices, F102: Making Social Connection, F103: Doing Business, F104: Accessing Government Services, F105: Cyber Hygiene for Everyone and F106: eWaste Management. Visit (https://www.smartacademy.go.ke) to learn more."
+    },
+    {
+      "title":"F101",
+      "tags": ["foundational", "modules", "foundational_units", "topics"],
+      "questions": [
+          "What is F101 about?",
+          "What is the unit Operating Digital Devices about?",
+          "What will i learn in Operating Digital Devices?",
+          "Tell me more about F101",
+          "Can you explain F101"
+      ],
+      "answer": "Covers the basics of using digital devices like smartphones, tablets, and computers. Learners gain skills in turning devices on/off, navigating screens, using keyboards/mice/touchscreens, and managing simple settings."
+      },
+      {
+      "title":"F102",
+      "tags": ["foundational", "modules", "foundational_units", "topics"],
+      "questions": [
+          "What is F102 about?",
+          "What is the topic Making Social Connection about?",
+          "Tell me more about F102",
+          "Can you explain F102",
+          "What will i learn in Making Social Connection?"],
+      "answer": "Teaches how to use digital tools (e.g. messaging apps, social media platforms) to communicate and stay connected with family, friends,and communities safely and effectively."
+      },
+      {
+      "title":"F103",
+      "tags": ["foundational", "modules", "foundational_units", "topics"],
+      "questions": [
+          "What is F103 about",
+          "What is the unit Doing Business about?",
+          "What skills will i gain from the module of Doing Business",
+          "Tell me more about the unit F103",
+          "Can you explain F103"],
+      "answer":"Introduces how digital tools can help in running or starting a business, such as using online marketplaces, digital payments, social media marketing, and basic online business management."
+      },
+      {
+      "title":"F104",
+      "tags": ["foundational", "modules", "foundational_units", "topics"],
+      "questions": [
+          "What is F104 about?",
+          " What content does the module Accessing Government Services include?",
+          "Can you explain F104",
+          "What skills will i learn from the unit Accessing Government Services",
+          "Tell me more about Accesing Government Services"],
+      "answer": "Explains how to find and use online government services (e.g. applying for documents, paying bills, accessing public information) securely and confidently."
+      },
+      {
+      "title":"F105",
+      "tags": ["foundational", "modules", "foundational_units", "topics"],
+      "questions": [
+          "What is F105 about?",
+          "What does the topic Cyber Hygiene for Everyone involve?",
+          "Can you explain F105",
+          "Tell me more about the topic Cyber Hygiene for Everyone",
+          "What skills will i learn from the unit Cyber Hygiene for Everyone"],
+      "answer": "Focuses on safe internet practices, like creating strong passwords, recognizing scams, protecting personal data, and avoiding harmful online content or malware."
+      },
+      {
+      "title":"F106",
+      "tags": ["foundational", "modules", "foundational_units", "topics"],
+      "questions": [
+          "What is F106 about",
+          "What is eWaste Management about?",
+          "Tell me more about eWaste management",
+          "Can you explain F106",
+          "What skills will i learn from eWaste Management"],
+      "answer": "Covers the importance of disposing of digital devices responsibly, environmental impacts of electronic waste, and how to recycle or donate devices safely."
+      },
+
+    {
+      "title": "Basic Digital Skills",
+      "tags": ["beginner+", "fundamentals", "basic", "basic_course_info", "Basic Digital Skills"],
+      "questions": [
+        "Tell me about basic digital skills",
+        "Tell me about your basic courses.",
+        "What are your basic level courses?",
+        "What is the basic digital skills course about?",
+        "Can you tell me more about the digital skills training?",
+        "Why should I take the digital skills program?",
+        "What will I learn in basic digital skills?",
+        "Who is this course for?",
+        "Which basic IT Courses do you offer?",
+        "Are there any simple courses I can try?",
+        "What courses are available after Foundational level?",
+        "I have a little IT knowledge, which course should I take?"
+      ],
+      "answer": "The Basic Digital Skills curriculum equips learners with essential skills for today's digital society. Topics include productivity tools, communication, government services, and more. It helps you use digital tools for learning, communication, and professional growth. Details at https://www.smartacademy.go.ke."
+    },
+    {
+      "title": "Basic Course units",
+      "tags": ["basic_units", "basic", "basic_course_units", "basic digital skills"],
+      "questions": [
+        "What topics are covered in the basic digital skills course?",
+        "Can I see the list of digital skills modules?",
+        "What are the units under this program?",
+        "Which digital skills courses do you offer?",
+        "Tell me the course codes and names"
+      ],
+      "answer": "Here are the courses included:\nB201: Digital Devices in Digital Workspace\nB202: Skills in Basic Productivity Tools\nB203: Communication and Collaboration\nB204: Access to Government Services\nB205: Video Production and Editing\nB206: Learning Online\nB207: Basic Online Work Skills\nB208: Digital Entrepreneurship\nB209: Cyberhygiene\nB210: E-Waste Management"
+    },
+    {
+      "title": "B203",
+      "tags": ["basic_course_detail", "b203", "basic_units", "basic", "basic_course_units", "basic digital skills"],
+      "questions": [
+        "What is B203 about?",
+        "What do I learn in Communication and Collaboration?",
+        "Tell me more about B203"
+      ],
+      "answer": "B203 (Communication and Collaboration) covers tools and strategies to effectively exchange information in digital environments."
+    },
+    {
+      "title": "B202",
+      "tags": ["basic_course_detail", "b202", "basic_units", "basic", "basic_course_units", "basic digital skills"],
+      "questions": [
+        "What is B202 about?",
+        "What is Skills in Basic Productivity Tools?",
+        "Can you explain B202?"
+      ],
+      "answer": "B202 introduces key digital productivity tools such as word processors, spreadsheets, and presentation software."
+    },
+    {
+      "title": "B201",
+      "tags": ["basic_course_detail", "b201", "basic_units", "basic", "basic_course_units", "basic digital skills"],
+      "questions": [
+        "What is B201 about?",
+        "Tell me more about Digital Devices in Digital Workspace",
+        "What will I learn in B201?"
+      ],
+      "answer": "B201 teaches how to use digital devices effectively in modern workspaces including basic operations and applications."
+    },
+    {
+      "title": "Basic Duration and Cost",
+      "tags": ["basic_cost", "basic_duration", "basic"],
+      "questions": [
+        "How much does the course cost?",
+        "What is the fee for digital skills training?",
+        "How long does the course take?",
+        "What is the training duration?",
+        "Is it affordable?"
+      ],
+      "answer": "The full bundled Basic Digital Skills training costs KSh 2,500 and runs for 10 days."
+    },
+    {
+      "title": "Basic digital skills enrollment",
+      "tags": ["enroll", "how_to_apply", "basic", "Basic digital skills enrollment"],
+      "questions": [
+        "How do I enroll for the digital skills course?",
+        "Can I register online?",
+        "Where do I sign up for training?",
+        "Help me join the program",
+        "What's the process to apply?"
+      ],
+      "answer": "To enroll, just click the 'Register Now' button on the Smart Academy portal (https://www.smartacademy.go.ke) under your preferred course. Follow the steps to create an account and complete registration."
+    },
+    {
+      "title": "Basic Course Mode",
+      "tags": ["basic_learning_mode", "basic_structure", "basic"],
+      "questions": [
+        "Is the course self-paced?",
+        "Can I take it online?",
+        "Do I need to attend physical classes?",
+        "How is the course structured?",
+        "Is the training flexible?"
+      ],
+      "answer": "The course is self-paced and fully online, allowing you to learn at your own convenience within the 10-day period."
+    },
+    [
+  {
+    "title": "Intermediate Digital Skills",
+    "tags": ["intermediate-level", "skills-development", "certification", "training-programs", "intermediate", "moderate"],
+    "questions": [
+      "What is an intermediate course?",
+      "Who should take intermediate digital skills course?",
+      "What certifications are offered?",
+      "Can working professionals enroll in intermediate courses?",
+      "Are there flexible learning schedules available?",
+      "What is the difference between beginner and intermediate courses?",
+      "Are intermediate courses accredited?",
+      "What are the benefits of taking intermediate courses?",
+      "What skills do I gain from intermediate level?",
+      "Are intermediate courses job-oriented?",
+      "Do you have intermediate courses?",
+      "What comes after basic level?",
+      "What is taught at the intermediate level?"
+    ],
+    "answer": "The Intermediate Digital Skills courses at Smart Academy are designed for learners seeking in-depth expertise and career-ready proficiency in modern technologies. These courses build on foundational knowledge, offering specialized training, hands-on projects, and industry-recognized certifications to prepare you for high-demand roles in the digital economy. Explore course details and enrollment at https://www.smartacademy.go.ke."
+  },
+  {
+    "title": "Intermediate Course Enrollment & Structure",
+    "tags": ["intermediate-level", "training-details", "enrollment", "structure", "requirements"],
+    "questions": [
+      "What are the entry requirements for intermediate courses?",
+      "How long do intermediate digital skills courses take to complete?",
+      "Are Smart Academy intermediate courses certified by the government?",
+      "Do I need to have done beginner courses before joining intermediate?",
+      "Are there exams or assessments for intermediate courses?",
+      "What kind of certification will I get after completing?",
+      "Are these courses free or paid?",
+      "How do I apply for intermediate courses at Smart Academy?",
+      "What payment methods are accepted for course fees?",
+      "Is there an age limit for intermediate courses?",
+      "Are the courses online, in-person, or hybrid?",
+      "Are schedules suitable for working professionals?",
+      "Is there a deadline for registration?",
+      "What support is available for students during the course?",
+      "Can I get a refund if I drop out of the course?",
+      "Do you offer job placement after course completion?",
+      "What materials or tools do I need for the courses?",
+      "Are there group projects in intermediate courses?",
+      "How many students are in one class?",
+      "Who are the trainers for these courses?",
+      "Can I access course materials after completion?",
+      "What makes Smart Academy different from other training providers?",
+      "Are there networking opportunities with other students?"
+    ],
+    "answer": "Smart Academy Intermediate programs include specialized courses such as Digital Ethics, Advanced Excel, Data Analytics, Python Programming, Project Management, and more. These are ideal for learners with foundational knowledge and take 1 to 2 months to complete. Courses are flexible, offered online, and supported with mentorship. Visit https://www.smartacademy.go.ke for eligibility, cost, and how to apply."
+  },
+  {
+    "title": "Intermediate Digital Skills Fees & Payment",
+    "tags": ["fee", "payment", "charges", "price", "registration", "enrollment fee", "cost", "expenses"],
+    "questions": [
+      "How much do intermediate-level courses cost at Smart Academy?",
+      "Is there a registration fee for intermediate courses?",
+      "Can I pay for intermediate courses in installments?",
+      "Are there scholarships or financial aid for intermediate digital skills courses?",
+      "What is the Paybill number for paying course fees?",
+      "Where do I get the Account Number for payment?",
+      "Can I use the same account number for different courses?",
+      "What should I do if I enter the wrong payment details?",
+      "Are payment instructions provided on the Smart Academy platform?",
+      "Can I get a receipt or proof of payment after registration?"
+    ],
+    "answer": "Intermediate courses cost approximately KES 5,000. Payments are made through the eCitizen platform using Paybill number 222222. Account numbers are generated automatically during registration. Always confirm details before submitting. Receipts are available on your Smart Academy portal."
+  },
+  {
+    "title": "Intermediate Course: I303 - Advanced Excel",
+    "tags": ["course-detail", "I303"],
+    "questions": [
+      "What is I303 about?",
+      "Can you explain I303?",
+      "I want to learn Excel for data analysis",
+      "Tell me about the Advanced Excel course",
+      "What topics are covered in I303?",
+      "What is the focus of I303?",
+      "What skills will I learn in I303?"
+    ],
+    "answer": "I303 - Advanced Excel for the Analysis is an intermediate-level course designed to enhance your skills in Excel, especially for data analysis tasks. It includes formulas, pivot tables, charts, and automation. The course runs for 40 hours."
+  },
+  {
+    "title": "Intermediate Course: I304 - eLearning Content Production",
+    "tags": ["course-detail", "I304"],
+    "questions": [
+      "What is I304 about?",
+      "Can you explain I304?",
+      "I want to learn how to create eLearning content",
+      "Tell me about the eLearning Content Production course",
+      "What topics are covered in I304?",
+      "What is the focus of I304?",
+      "What skills will I learn in I304?"
+    ],
+    "answer": "I304 - eLearning Content Production is an intermediate-level course that teaches you how to design and produce digital learning materials. The course covers video editing, audio recording, and interactive content creation. Duration: 40 hours."
+  },
+  {
+    "title": "Intermediate Course: I305 - Data Management and Analytics",
+    "tags": ["course-detail", "I305"],
+    "questions": [
+      "What is I305 about?",
+      "Can you explain I305?",
+      "I want to learn about data management and analytics",
+      "Tell me about the Data Management and Analytics course",
+      "What topics are covered in I305?",
+      "What is the focus of I305?",
+      "What skills will I learn in I305?"
+    ],
+    "answer": "I305 - Data Management and Analytics focuses on organizing, storing, analyzing, and interpreting data. Topics include databases, dashboards, data visualization, and using analytics tools. Runs for 40 hours."
+  },
+  {
+    "title": "Intermediate Course: I306 - Digital Marketing & E-Commerce",
+    "tags": ["course-detail", "I306"],
+    "questions": [
+      "What is I306 about?",
+      "Can you explain I306?",
+      "I want to learn about digital marketing and e-commerce",
+      "Tell me about the Digital Marketing, E-Commerce & Entrepreneurship course",
+      "What topics are covered in I306?",
+      "What is the focus of I306?",
+      "What skills will I learn in I306?"
+    ],
+    "answer": "I306 - Digital Marketing, E-Commerce & Entrepreneurship teaches how to promote businesses online, create digital shops, use social media, and develop entrepreneurial thinking. Duration: 40 hours."
+  },
+  {
+    "title": "Intermediate Course: I307 - Web Design and Development",
+    "tags": ["course-detail", "I307"],
+    "questions": [
+      "What is I307 about?",
+      "Can you explain I307?",
+      "I want to learn web design and development",
+      "Tell me about the Web Design and Development course",
+      "What topics are covered in I307?",
+      "What is the focus of I307?",
+      "What skills will I learn in I307?"
+    ],
+    "answer": "I307 - Web Design and Development introduces HTML, CSS, layout design, responsive UI, and best practices for creating websites. Ideal for future developers. Duration: 40 hours."
+  },
+  {
+    "title": "Intermediate Course: I308 - Introduction to Python Programming",
+    "tags": ["course-detail", "I308"],
+    "questions": [
+      "What is I308 about?",
+      "Can you explain I308?",
+      "I want to learn programming with Python",
+      "Tell me about the Introduction to Programming with Python course",
+      "What topics are covered in I308?",
+      "What is the focus of I308?",
+      "What skills will I learn in I308?"
+    ],
+    "answer": "I308 - Introduction to Programming with Python is a beginner-friendly coding course. Learn about variables, loops, conditionals, functions, and simple applications. Duration: 40 hours."
+  },
+  {
+    "title": "Intermediate Course: I310 - Fundamentals of Networking",
+    "tags": ["course-detail", "I310"],
+    "questions": [
+      "What is I310 about?",
+      "Can you explain I310?",
+      "I want to learn networking basics",
+      "Tell me about the Fundamentals of Networking course",
+      "What topics are covered in I310?",
+      "What is the focus of I310?",
+      "What skills will I learn in I310?"
+    ],
+    "answer": "I310 - Fundamentals of Networking covers LAN, WAN, IP addressing, switches, routers, and how data travels over the internet. A great start for networking careers. Duration: 40 hours."
+  },
+  {
+    "title": "Intermediate Course: I313 - eWaste Management & Circularity",
+    "tags": ["course-detail", "I313"],
+    "questions": [
+      "What is I313 about?",
+      "Can you explain I313?",
+      "I want to learn about eWaste management",
+      "Tell me about the eWaste Management and Circularity course",
+      "What topics are covered in I313?",
+      "What is the focus of I313?",
+      "What skills will I learn in I313?"
+    ],
+    "answer": "I313 - eWaste Management & Circularity educates learners on proper disposal of electronics, reducing waste, and implementing sustainable digital practices. Duration: 40 hours."
+  },
+  {
+    "title": "Intermediate Course: I314 - Cyber Hygiene for SMEs",
+    "tags": ["course-detail", "I314"],
+    "questions": [
+      "What is I314 about?",
+      "Can you explain I314?",
+      "I want to learn about cyber hygiene for SMEs",
+      "Tell me about the Cyber Hygiene course",
+      "What topics are covered in I314?",
+      "What is the focus of I314?",
+      "What skills will I learn in I314?"
+    ],
+    "answer": "I314 - Cyber Hygiene for Small and Medium Enterprises (SMEs) focuses on protecting businesses from cyber threats using practical security habits. Duration: 40 hours."
+  }
+],
+
+    {
+  "title": "Advanced Digital Skills Overview",
+  "tags": ["advanced", "expert", "overview", "advanced_courses"],
+  "questions": [
+    "Tell me about advanced digital skills",
+    "What advanced courses are available?",
+    "What is the difference between beginner and advanced courses?",
+    "Can I skip beginner courses and go straight to advanced?",
+    "How do I know if a course is advanced level?",
+    "What makes a course advanced?",
+    "Are advanced courses accredited?",
+    "Are these courses suitable for professionals?",
+    "Where can I register for advanced courses?"
+  ],
+  "answer": "Advanced Digital Skills courses at Smart Academy are designed for learners aiming for career-level technical expertise. Topics include AI for SDGs, Fintech, Cybersecurity and Analytics, Integrated Circuit Design (IoT), and more. These courses are project-driven and often require foundational or intermediate experience. Visit https://www.smartacademy.go.ke to explore."
+},
+{
+  "title": "Advanced Course Enrollment",
+  "tags": ["advanced_enrollment", "requirements", "registration", "support"],
+  "questions": [
+    "What are the requirements to enroll in an advanced course?",
+    "Do I need prior experience for advanced courses?",
+    "Are there deadlines for enrollment?",
+    "Can I join an advanced course mid-session?",
+    "Are advanced courses instructor-led?",
+    "Is tutor support available?",
+    "What support will I get during the course?",
+    "How do I register for advanced courses?"
+  ],
+  "answer": "Advanced courses may require prior experience in digital skills. Enrollment is online via Smart Academy's portal. Support includes tutor interaction, peer forums, and project reviews. Visit the official site to sign up."
+},
+{
+  "title": "Advanced Course Format and Duration",
+  "tags": ["advanced_duration", "advanced_mode", "learning_structure"],
+  "questions": [
+    "Are advanced courses online?",
+    "How long do advanced courses take?",
+    "Are there physical classes for advanced courses?",
+    "Are courses self-paced or scheduled?",
+    "Is there a flexible learning option?",
+    "How are advanced courses structured?"
+  ],
+  "answer": "Advanced courses are fully online and typically run for 3 to 6 months. They include practical tasks, assessments, and live support. Some courses may have weekly schedules or deadlines."
+},
+{
+  "title": "A401 - AI for SDGs",
+  "tags": ["course_detail", "AI", "A401"],
+  "questions": [
+    "What is A401 about?",
+    "Tell me more about the AI for SDGs course",
+    "What will I learn in A401?",
+    "Is A401 suitable for beginners?",
+    "Does A401 use real-world examples?"
+  ],
+  "answer": "A401 - AI for SDGs teaches how Artificial Intelligence supports the United Nations Sustainable Development Goals. You'll explore data-driven innovations for solving global challenges like poverty, climate, and health, and learn ethical AI practices using real-world case studies."
+},
+{
+  "title": "A402 - Fintech Technologies",
+  "tags": ["course_detail", "fintech", "A402"],
+  "questions": [
+    "What is A402 about?",
+    "What is covered in Fintech Technologies?",
+    "Will I learn about cryptocurrencies in A402?",
+    "What are the applications of fintech?",
+    "Is A402 technical or theoretical?"
+  ],
+  "answer": "A402 covers digital innovations in finance, including blockchain, crypto, mobile banking, robo-advisors, and peer-to-peer lending. The course focuses on how fintech improves financial access, transparency, and security."
+},
+{
+  "title": "A403 - Cybersecurity and Analytics",
+  "tags": ["course_detail", "cybersecurity", "analytics", "A403"],
+  "questions": [
+    "What is A403 about?",
+    "What does Cybersecurity and Analytics entail?",
+    "Will I learn about data breaches?",
+    "Does A403 cover threat detection?",
+    "What are the outcomes of A403?"
+  ],
+  "answer": "A403 teaches defensive strategies against digital threats using data analytics. Ideal for aspiring security analysts or managers, it includes threat intelligence, anomaly detection, and cyber risk evaluation."
+},
+{
+  "title": "A404 - Integrated Circuit Design and Fabrication (IoT)",
+  "tags": ["course_detail", "IoT", "hardware", "A404"],
+  "questions": [
+    "What is A404 about?",
+    "What will I learn in Integrated Circuit Design?",
+    "Is this course hardware-based?",
+    "Will I work on IoT devices?",
+    "Does A404 require electronics background?"
+  ],
+  "answer": "A404 focuses on designing microchips for IoT devices. It includes basics of electronic design, fabrication processes, and simulation tools for building low-power, high-efficiency circuits for smart devices."
+},
+{
+  "title": "A405 - Data Analytics for Decision Making",
+  "tags": ["course_detail", "analytics", "decision_making", "A405"],
+  "questions": [
+    "What is A405 about?",
+    "Will I learn statistics in A405?",
+    "How is data used for decision making?",
+    "What tools will I use in A405?",
+    "Is there a project in A405?"
+  ],
+  "answer": "A405 covers how to gather, clean, and analyze data for informed decision-making. It involves hands-on use of data tools and visualization techniques to turn raw data into actionable business insights."
+},
+{
+  "title": "A406 - Advanced Project Management",
+  "tags": ["course_detail", "project_management", "A406"],
+  "questions": [
+    "What is A406 about?",
+    "What advanced tools are covered?",
+    "Will I learn agile project management?",
+    "Is A406 suitable for team leads?",
+    "What is the difference between A406 and basic PM courses?"
+  ],
+  "answer": "A406 teaches advanced strategies in project planning, budgeting, agile execution, and stakeholder communication. Designed for professionals managing complex or high-value projects."
+},
+{
+  "title": "A407 - E‑Waste Management and Circular AI",
+  "tags": ["course_detail", "environment", "AI", "A407"],
+  "questions": [
+    "What is A407 about?",
+    "How is AI used in eWaste management?",
+    "What skills are taught in A407?",
+    "Does this course focus on sustainability?",
+    "What tools will I learn in A407?"
+  ],
+  "answer": "A407 explores how AI can optimize eWaste recycling. Learn smart waste categorization, predictive analytics, and environmental compliance for sustainable digital ecosystems."
+},
+{
+  "title": "A408 - Digital Project Monitoring and Evaluation (MeL)",
+  "tags": ["course_detail", "monitoring", "evaluation", "A408"],
+  "questions": [
+    "What is A408 about?",
+    "What does MeL mean?",
+    "Is A408 for NGO projects?",
+    "What tools are used in A408?",
+    "What kind of data is analyzed in MeL?"
+  ],
+  "answer": "A408 teaches digital tools for monitoring project progress and evaluating impact. You'll learn performance indicators, real-time dashboards, and using feedback loops for decision support."
+},
+{
+  "title": "A409 - Project Contract Management",
+  "tags": ["course_detail", "contract", "A409"],
+  "questions": [
+    "What is A409 about?",
+    "What skills are taught in Contract Management?",
+    "Is A409 legal-focused?",
+    "Will I learn procurement?",
+    "Is A409 suitable for NGOs or corporate?"
+  ],
+  "answer": "A409 teaches effective contract creation, negotiation, compliance tracking, and dispute resolution. Ideal for project managers working with vendors, clients, or subcontractors."
+},
+{
+  "title": "A410 - Large Programme Management",
+  "tags": ["course_detail", "program_management", "A410"],
+  "questions": [
+    "What is A410 about?",
+    "How is programme management different from project management?",
+    "Does A410 require experience?",
+    "What frameworks are taught?",
+    "Is A410 good for senior managers?"
+  ],
+  "answer": "A410 focuses on managing interrelated projects under large programs. You’ll learn stakeholder governance, strategic planning, and multi-team coordination to deliver on big initiatives."
+},
+
+    {
+      "title": "Certification",
+      "tags": ["certificate", "completion"],
+      "questions": [
+        "Will I get a certificate?",
+        "Do all courses offer a certificate?",
+        "Can I use the certificate for job applications?",
+        "When will I receive my certificate?",
+        "Do I pay for the certification?",
+        "Can I get a replacement certificate?",
+        "Is the certificate recognized?",
+        "Does the certificate have an expiry date?"
+      ],
+      "answer": "Yes, you will receive a recognized digital certificate upon completion. It does not expire and can be used for job applications. Replacements can be requested if needed."
+    },
+    {
+      "title": "Payment Process",
+      "tags": ["payment", "ecitizen"],
+      "questions": [
+        "How do I pay for a course?",
+        "How can I make a payment?",
+        "What is the payment method?",
+        "Is payment done through eCitizen?",
+        "Do you accept bank transfers?"
+      ],
+      "answer": "Payments are made through the eCitizen platform using Paybill number 222222. Account numbers are generated automatically per course during registration."
+    },
+    {
+      "title": "Paybill & Account Details",
+      "tags": ["payment", "paybill"],
+      "questions": [
+        "What is the Paybill number?",
+        "What is the Account Number?",
+        "Is the Paybill number available on the website?",
+        "Do I need a unique account number for each course?",
+        "What happens if I enter the wrong account number?",
+        "Can you send me the Paybill and Account details?"
+      ],
+      "answer": "Use Paybill number 222222 on eCitizen. Account numbers are generated per course. Visit https://www.smartacademy.go.ke for payment help."
+    },
+    {
+      "title": "Course Fees",
+      "tags": ["payment", "fees"],
+      "questions": [
+        "How much does a course cost?",
+        "Are there discounts available?",
+        "Is there a payment plan available?",
+        "Can I pay in installments?",
+        "Can I pay later and start now?",
+        "Do I get a receipt after payment?",
+        "Is there a refund policy?",
+        "What if I miss a payment?"
+      ],
+      "answer": "Course fees are as follows:\n- Foundational: 500 KES\n- Basic: 2,500 KES\n- Intermediate: 5,000 KES\n- Advanced: 12,000 KES\n\nPay via eCitizen using Paybill 222222."
+    }
+  ]
+}
