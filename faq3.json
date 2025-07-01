@@ -220,10 +220,10 @@
       "title": "Basic Duration and Cost",
       "tags": ["basic_cost", "basic_duration", "basic"],
       "questions": [
-        "How much does the course cost?",
-        "What is the fee for digital skills training?",
-        "How long does the course take?",
-        "What is the training duration?",
+        "How much does the basic course cost?",
+        "What is the fee for basic skills training?",
+        "How long does the basic course take?",
+        "What is the basic training duration?",
         "Is it affordable?"
       ],
       "answer": "The full bundled Basic Digital Skills training costs KSh 2,500 and runs for 10 days."
